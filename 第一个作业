@@ -1,0 +1,44 @@
+####1、单元测试记录软件系统内部和外部的结构；
+####2、单元测试帮助你和其他开发者迅速地看到是否“升级”的代码打乱了已有的代码；
+####3、单元测试是你的软件原理bug—所有的问题都会在编写测试时解决掉；
+####4、单元测试结合“code coverage”会让提升你软件的质量；
+####5、单元测试可以在开发过程中显著提高团队信心——如果所有的测试通过了，则意味着所有的特性顺利运行，每个人都工作得很出色###
+####6、单元测试提高了效率——你不再需要恼人的手工测试，而且代码变动后，你只需要开启单元测试并且查看红/绿栏即可。
+
+package 李鹏辉;
+
+import java.util.Scanner;
+
+public class 李鹏辉 {
+	public static void main(String[] args) {
+int []bs= new int[6];
+Scanner scan=new Scanner(System.in);
+bs[0]=scan.nextInt();
+bs[1]=scan.nextInt();
+bs[2]=scan.nextInt();
+bs[3]=scan.nextInt();
+bs[4]=scan.nextInt();
+bs[5]=scan.nextInt();
+
+	for(int i=0;i<bs.length;i++)
+	{
+		for(int j=0;j<bs.length-i-1;j++)
+		{
+			if(bs[j]>bs[j+1])
+			{
+				int temp = bs[j+1];
+				bs[j+1]=bs[j];
+				bs[j]=temp;
+			}
+		}
+	}
+	System.out.print("排序后的数组是：");
+	for(int i=0;i<bs.length;i++)
+		System.out.print(bs[i]+"\t");
+	}
+	}
+  ####  测试用例：
+  ####  1，5，7，89，90，123
+  ####  1，34，56，67，78，89
+  ####  23，345，56，67，78，89
+  ####  23423，456457，67687，89898，567，34
